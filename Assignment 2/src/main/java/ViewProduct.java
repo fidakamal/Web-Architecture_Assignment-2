@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 
 public class ViewProduct extends HttpServlet {
-    int totalItem = 0;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -17,17 +16,19 @@ public class ViewProduct extends HttpServlet {
             for (String item : cart.keySet()) {
                 if (item.equals("Item " + itemIdx)) {
                     cart.put(item, cart.get(item) + 1);
-                    totalItem++;
                     itemExists = true;
                 }
             }
 
             if (itemExists == false) {
                 cart.put("Item " + itemIdx, 1);
-                totalItem++;
             }
         }
 
+
+        int totalItem = 0;
+        for(String item: cart.keySet())
+            totalItem += cart.get(item);
 
         response.setContentType("text/html");
 
