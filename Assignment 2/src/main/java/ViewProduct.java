@@ -8,6 +8,12 @@ public class ViewProduct extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         HashMap<String, Integer> cart = (HashMap<String, Integer>)request.getSession().getAttribute("cart");
         if(request.getParameter("item") != null) {
             int itemIdx = Integer.parseInt(request.getParameter("item"));
@@ -38,11 +44,6 @@ public class ViewProduct extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/viewProduct.html");
         rd.include(request, response);
 
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

@@ -5,23 +5,21 @@
     <title>View Products</title>
 </head>
 <body>
-<form action="ViewCart"><button>View Cart</button></form>
-<form action="Checkout" method="post"><button>Checkout</button></form>
-<form action="ViewProduct">
-    <ol>
-        <li>Item 1
-        <button name="item" value="1">Add to Cart</button>
-        </li>
-        <li>Item 2
-            <button name="item" value="2">Add to Cart</button>
-        </li>
-        <li>Item 3
-            <button name="item" value="3">Add to Cart</button>
-        </li>
-        <li>Item 4
-            <button name="item" value="4">Add to Cart</button>
-        </li>
-    </ol>
+<form action="ViewCart" style="display:inline-block"><button>View Cart</button></form>
+<form action="Checkout" method="post" style="display:inline-block"><button>Checkout</button></form>
+<form action="LogoutServlet" style="display:inline-block"><button>Logout</button></form><br><br>
+<form action="ViewProduct" method="post">
+        Item 1
+        <button name="item" value="1">Add to Cart</button><br><br>
+        Item 2
+            <button name="item" value="2">Add to Cart</button><br><br>
+
+        Item 3
+            <button name="item" value="3">Add to Cart</button><br><br>
+
+        Item 4
+            <button name="item" value="4">Add to Cart</button><br><br>
+
 </form>
 </body>
 </html>

@@ -16,7 +16,7 @@ public class ConfirmPurchase extends HttpServlet {
         cart.clear();
 
         String location = request.getContextPath() + "/viewProduct.html";
-        out.println("<form action=\" " + location + "\"><button>Go Back to Homepage</button></form>\n");
+        out.println("<form action=\"ViewProduct\" method=\"post\"><button>Go Back to Homepage</button></form>\n");
     }
 
     @Override

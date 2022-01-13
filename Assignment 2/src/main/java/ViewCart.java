@@ -28,8 +28,8 @@ public class ViewCart extends HttpServlet {
             out.println("Your cart is empty.");
 
         String location = request.getContextPath() + "/viewProduct.html";
-        out.println("<form action=\"" + location + "\"><button>Homepage</button></form>");
-        out.println("<form action=\"Checkout\" method=\"post\"><button>Checkout</button></form>\n");
+        out.println("<form action=\"ViewProduct\" method=\"post\" style=\"display:inline-block\"><button>Homepage</button></form>");
+        out.println("<form action=\"Checkout\" method=\"post\" style=\"display:inline-block\"><button>Checkout</button></form><br><br>\n");
 
         for(String item: cart.keySet())
         {

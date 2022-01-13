@@ -17,17 +17,19 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("username");
         String pw = request.getParameter("password");
 
+
         if (name.equals(username) && pw.equals(password)) {
+
             HttpSession session = request.getSession();
             session.setAttribute("currentUser", name);
 
             HashMap<String, Integer> cart = new HashMap<String, Integer>();
             session.setAttribute("cart", cart);
 
-
-            RequestDispatcher rd = request.getRequestDispatcher("/viewProduct.html");
+            RequestDispatcher rd = request.getRequestDispatcher("ViewProduct");
             rd.forward(request, response);
-        } else {
+        }
+        else {
             response.setContentType("text/html");
 
             PrintWriter out = response.getWriter();
