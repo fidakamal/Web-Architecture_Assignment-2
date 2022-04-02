@@ -27,7 +27,6 @@ public class ViewCart extends HttpServlet {
         if(cart.size() == 0)
             out.println("Your cart is empty.");
 
-        String location = request.getContextPath() + "/viewProduct.html";
         out.println("<form action=\"ViewProduct\" method=\"post\" style=\"display:inline-block\"><button>Homepage</button></form>");
         out.println("<form action=\"Checkout\" method=\"post\" style=\"display:inline-block\"><button>Checkout</button></form><br><br>\n");
 

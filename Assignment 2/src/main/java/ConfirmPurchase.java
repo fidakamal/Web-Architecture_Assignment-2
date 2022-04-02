@@ -15,7 +15,6 @@ public class ConfirmPurchase extends HttpServlet {
         HashMap<String, Integer> cart = (HashMap<String, Integer>)request.getSession().getAttribute("cart");
         cart.clear();
 
-        String location = request.getContextPath() + "/viewProduct.html";
         out.println("<form action=\"ViewProduct\" method=\"post\"><button>Go Back to Homepage</button></form>\n");
     }
 
